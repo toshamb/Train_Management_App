@@ -2,18 +2,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class trainconsistentmanagementapp1 {
-
     public static void main(String[] args) {
-        // Welcome message
         System.out.println("=== Train Consist Management App ===");
 
-        // Initialize train consist using dynamic list
-        List<String> trainConsist = new ArrayList<>();
+        // UC1: Initialize empty train consist
+        List<String> bogies = new ArrayList<>();
+        System.out.println("Initial bogie count: " + bogies.size());
 
-        // Display initial bogie count
-        System.out.println("Initial bogie count: " + trainConsist.size());
+        // UC2: Add passenger bogies
+        bogies.add("Sleeper - 72 seats");
+        bogies.add("AC Chair - 56 seats");
+        bogies.add("First Class - 24 seats");
 
-        // Program continues...
-        System.out.println("Train initialized successfully. Ready for operations!");
+        // Display updated consist summary
+        System.out.println("\nPassenger bogies added:");
+        for (String bogie : bogies) {
+            System.out.println(" - " + bogie);
+        }
+
+        System.out.println("Total bogie count: " + bogies.size());
     }
 }
